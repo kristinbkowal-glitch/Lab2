@@ -6,7 +6,7 @@
     <title>Attributes and Links</title>
 </head>
 <body>
-    <h1>Attributes and Links</h1>
+    <h1 id="top">Attributes and Links</h1>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -17,5 +17,101 @@
             <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
     </nav>
+
+    <!-- This page teaches attributes by using them on its own elements -->
+    <p>
+        This page is a demonstration of itself: nearly every element below
+        carries an attribute, and the attributes are what make the element do
+        something extra. Jump straight to the
+        <a href="#attribute-anatomy">anatomy of an attribute</a> using the
+        fragment link in this sentence, which only works because that
+        heading below carries a matching <code>id</code>.
+    </p>
+
+    <!-- Section 1: the anatomy of an attribute, explained in the text itself -->
+    <h2 id="attribute-anatomy">Anatomy of an Attribute</h2>
+    <p>
+        An attribute lives inside an opening tag and has three parts: a
+        <b>name</b>, an <b>equals sign</b>, and a <b>quoted value</b>. For
+        example, in <code>&lt;p lang="fr"&gt;</code>, the name is
+        <code>lang</code>, the equals sign connects it to the value, and
+        <code>"fr"</code> is the quoted value. Attributes always live inside
+        the opening tag, never the closing tag, and a single element can
+        carry several of them at once.
+    </p>
+
+    <!-- Section 2: lang attribute, demonstrated on a foreign-language phrase -->
+    <h2 id="lang-example">The lang Attribute</h2>
+    <p>
+        The <code>lang</code> attribute tells the browser and screen readers
+        what language an element's text is written in, which affects
+        pronunciation and translation tools. Here is a French greeting
+        marked up correctly:
+    </p>
+    <p lang="fr" title="French for 'Good day, how are you?'">
+        Bonjour, comment allez-vous&#8202;?
+    </p>
+    <p>
+        Hover over that sentence (or read its <code>title</code> value) to
+        see a translation, because it also carries a <code>title</code>
+        attribute.
+    </p>
+
+    <!-- Section 3: id and class attributes on plain elements -->
+    <h2 id="id-class-example">The id and class Attributes</h2>
+    <p>
+        <code>id</code> must be unique on the page and is used for
+        fragment links like the one at the top of this page. <code>class</code>
+        can be reused on many elements and is used to group them, usually for
+        styling or scripting. Below are two spans that both carry a
+        <code>class</code>, and one of them also carries the unique
+        <code>id</code> this paragraph just described.
+    </p>
+    <p>
+        <span id="highlighted-term" class="glossary-term" title="A unique identifier for one element">This span has both an id and a class.</span>
+        &mdash;
+        <span class="glossary-term" title="A reusable label shared by many elements">This span only has a class.</span>
+    </p>
+
+    <!-- Power Up: an image that is itself an attribute showcase -->
+    <h2 id="image-showcase">Power Up: An Image Made of Attributes</h2>
+    <p>
+        Even an image tag is really just a bundle of attributes. This one
+        sets <code>src</code>, <code>alt</code>, <code>width</code>,
+        <code>height</code>, and <code>title</code>:
+    </p>
+    <img src="images/tag-icon.svg" alt="A price-tag icon with the text name equals value in quotes, illustrating the parts of an HTML attribute" width="200" height="150" title="This image itself is an attribute showcase: src, alt, width, height, and title are all set on this one tag.">
+
+    <!-- Section 4: the Links half of this page - every link type in one place -->
+    <h2 id="links-showcase">Links: This Section Is Made of Links</h2>
+    <p>
+        A hyperlink is created with the <code>a</code> tag and its
+        <code>href</code> attribute. Here are several different kinds:
+    </p>
+    <ul>
+        <li>
+            <a href="#top">A fragment link</a> back to the top of this page,
+            using the <code>id="top"</code> on the page's own
+            <code>h1</code>.
+        </li>
+        <li>
+            <a href="index.html">A relative link</a> to the site's home
+            page, using a plain filename instead of a full web address.
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a" target="_blank" rel="noopener noreferrer">An absolute link</a>
+            to MDN's reference on the anchor element, opened in a new tab
+            with <code>target="_blank"</code> and secured with
+            <code>rel="noopener noreferrer"</code>.
+        </li>
+        <li>
+            <a href="mailto:example@example.com">A mailto link</a> that
+            opens the visitor's email client.
+        </li>
+        <li>
+            <a href="tel:+15555550123">A tel link</a> that dials a phone
+            number on devices that support it.
+        </li>
+    </ul>
 </body>
 </html>

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formatting Text and Quotes</title>
+    <title>Formatting, Quotations, and Comments</title>
 </head>
 <body>
-    <h1>Formatting Text and Quotes</h1>
+    <h1>Formatting, Quotations, and Comments</h1>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -17,5 +17,65 @@
             <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
     </nav>
+
+    <!-- Section: Emphasis with strong and em -->
+    <h2>Emphasis</h2>
+    <p>
+        <strong>strong</strong> marks text as having strong importance, like
+        a warning, while <em>em</em> marks text as stressed or emphasized,
+        the way you would lean on a word when speaking it aloud. Neither one
+        is just about looking bold or italic; both carry meaning that
+        assistive technology can announce.
+    </p>
+
+    <!-- Section: an inline quote using q, quoting a real source -->
+    <h2 id="inline-quote">An Inline Quote</h2>
+    <p>
+        In his statement on Web accessibility, Tim Berners-Lee, the
+        inventor of the World Wide Web, calls accessible design an
+        <q cite="https://www.w3.org/mission/accessibility/">essential aspect</q>
+        of the Web, not an afterthought.
+    </p>
+
+    <!-- Section: a block quote with a cite attribute, wrapped in figure/figcaption for attribution -->
+    <h2 id="block-quote">A Block Quote</h2>
+    <p>
+        The full statement is longer, and long quotations belong in a
+        <code>blockquote</code> rather than a <code>q</code>:
+    </p>
+    <figure>
+        <blockquote cite="https://www.w3.org/mission/accessibility/">
+            <p>
+                The power of the Web is in its universality. Access by
+                everyone regardless of disability is an essential aspect.
+            </p>
+        </blockquote>
+        <figcaption>
+            &mdash; Tim Berners-Lee, W3C Founding Director, quoted on
+            <cite>W3C: Accessibility</cite>
+        </figcaption>
+    </figure>
+
+    <!-- Section: code and pre for showing markup itself -->
+    <h2 id="code-samples">Code Samples</h2>
+    <p>
+        Use inline <code>code</code> for a short snippet like
+        <code>&lt;blockquote&gt;</code>, and a <code>pre</code> block when
+        the spacing and line breaks of a longer snippet need to be kept
+        exactly as written:
+    </p>
+    <pre><code>&lt;blockquote cite="https://example.com"&gt;
+  &lt;p&gt;A quoted passage goes here.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+
+    <!-- Section: abbr with a title, and mark to highlight a key term -->
+    <h2 id="abbr-mark">Abbreviations and Highlights</h2>
+    <p>
+        The <abbr title="HyperText Markup Language">HTML</abbr> standard is
+        maintained by the WHATWG as a <mark>living standard</mark>, meaning
+        it is updated continuously instead of being released in numbered
+        versions. Hovering over <abbr title="HyperText Markup Language">HTML</abbr>
+        reveals what the abbreviation stands for.
+    </p>
 </body>
 </html>

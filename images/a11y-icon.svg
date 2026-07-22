@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150" role="img" aria-labelledby="a11yIconTitle">
+    <title id="a11yIconTitle">The universal accessibility icon: a person with arms and legs outstretched inside a circle</title>
+    <circle cx="75" cy="75" r="70" fill="none" stroke="#000000" stroke-width="4"></circle>
+    <circle cx="75" cy="40" r="12" fill="#000000"></circle>
+    <line x1="75" y1="55" x2="75" y2="95" stroke="#000000" stroke-width="6"></line>
+    <line x1="75" y1="65" x2="35" y2="50" stroke="#000000" stroke-width="6"></line>
+    <line x1="75" y1="65" x2="115" y2="50" stroke="#000000" stroke-width="6"></line>
+    <line x1="75" y1="95" x2="45" y2="130" stroke="#000000" stroke-width="6"></line>
+    <line x1="75" y1="95" x2="105" y2="130" stroke="#000000" stroke-width="6"></line>
+</svg>

@@ -6,16 +6,100 @@
     <title>Accessibility</title>
 </head>
 <body>
-    <h1>Accessibility</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="attributes-and-links.html">Attributes and Links</a></li>
-            <li><a href="images.html">Images</a></li>
-            <li><a href="semantic-vs-content-tags.html">Semantic vs Content Tags</a></li>
-            <li><a href="formatting-text-and-quotes.html">Formatting Text and Quotes</a></li>
-            <li><a href="comments-in-code.html">Comments in the Code</a></li>
-        </ul>
-    </nav>
+    <!-- Power Up: skip-to-content link, first focusable element on the page -->
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+        <h1>Accessibility</h1>
+        <!-- Power Up: aria-label on a landmark, since this page already has one nav -->
+        <nav aria-label="Field Guide site navigation">
+            <ul>
+                <li><a href="index.html">Go to the Field Guide home page</a></li>
+                <li><a href="attributes-and-links.html">Read the Attributes and Links page</a></li>
+                <li><a href="images.html">Read the Images page</a></li>
+                <li><a href="semantic-vs-content-tags.html">Read the Semantic vs Content Tags page</a></li>
+                <li><a href="formatting-text-and-quotes.html">Read the Formatting, Quotations, and Comments page</a></li>
+                <li><a href="comments-in-code.html">Read the Comments in the Code page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- This page tries to follow every rule it teaches -->
+        <p>
+            This page's job is to teach accessibility while following every
+            rule it describes: a correct heading order, a
+            <code>lang</code> attribute on <code>html</code>, real landmarks,
+            descriptive links, and a meaningful <code>alt</code> on its one
+            image.
+        </p>
+
+        <!-- Section: alt text -->
+        <h2 id="alt-text">Descriptive Alt Text</h2>
+        <p>
+            Every meaningful image needs an <code>alt</code> attribute that
+            describes what the image shows, not just its filename. Compare a
+            good description to a lazy one:
+        </p>
+        <img src="images/a11y-icon.svg" alt="The universal accessibility symbol: a stick figure with arms and legs outstretched, standing inside a circle" width="150" height="150">
+        <p>
+            A poor version of the same tag would read
+            <code>alt="icon1.svg"</code>, which tells a screen reader user
+            nothing about what the image actually contains.
+        </p>
+
+        <!-- Section: heading hierarchy -->
+        <h2 id="heading-hierarchy">A Correct Heading Hierarchy</h2>
+        <p>
+            This page has exactly one <code>h1</code>, and every section
+            below it is an <code>h2</code>. None of the headings skip a
+            level, for example jumping from an <code>h2</code> straight to
+            an <code>h4</code>, because a skipped level breaks the outline
+            that screen reader users rely on to navigate by heading.
+        </p>
+
+        <!-- Section: lang attribute -->
+        <h2 id="lang-attribute">The lang Attribute</h2>
+        <p>
+            The opening <code>&lt;html&gt;</code> tag on this very page is
+            written as <code>&lt;html lang="en"&gt;</code>, which tells
+            screen readers and translation tools that the page's default
+            language is English so text is pronounced correctly.
+        </p>
+
+        <!-- Section: landmarks -->
+        <h2 id="landmarks">Semantic Landmarks</h2>
+        <p>
+            This page is wrapped in a <code>header</code>, a <code>nav</code>,
+            this <code>main</code> region, and a <code>footer</code> below.
+            Landmarks let a screen reader user open a list of regions and
+            jump directly to the one they want instead of tabbing through
+            the whole page in order.
+        </p>
+
+        <!-- Section: descriptive links -->
+        <h2 id="descriptive-links">Descriptive Link Text</h2>
+        <p>
+            Every link in this page's navigation says what it goes to, like
+            "Read the Images page," instead of a vague phrase like
+            "click here." Screen readers can list every link on a page out
+            of context, so a link's own words need to make sense on their
+            own.
+        </p>
+
+        <!-- Section: keyboard navigation -->
+        <h2 id="keyboard-navigation">Keyboard Navigation</h2>
+        <p>
+            The skip link at the very top of this page is the first thing a
+            keyboard user reaches when pressing Tab, letting them jump
+            straight to <code>#main-content</code> instead of tabbing
+            through the entire navigation list on every single page. Try
+            it: reload this page and press Tab once.
+        </p>
+    </main>
+
+    <footer>
+        <p>Part of the <a href="index.html">HTML Field Guide</a>.</p>
+    </footer>
 </body>
 </html>

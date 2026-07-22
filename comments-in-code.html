@@ -17,5 +17,60 @@
             <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
     </nav>
+
+    <!-- Section: what a comment is -->
+    <h2 id="what-is-a-comment">What Is an HTML Comment?</h2>
+    <p>
+        A comment starts with <code>&lt;!--</code> and ends with
+        <code>--&gt;</code>. The browser never renders anything between
+        those two markers; it only shows up if someone views the page's
+        source code:
+    </p>
+    <pre><code>&lt;!-- This text is invisible on the page --&gt;</code></pre>
+
+    <!-- Section: why comments are useful -->
+    <h2 id="why-use-comments">Why Use Comments?</h2>
+    <ul>
+        <li>To label what a section of markup is for, so the next person
+            reading the file doesn't have to guess.</li>
+        <li>To leave a note or reminder, like a TODO, for whoever edits the
+            page next.</li>
+        <li>To temporarily remove a piece of markup from the page without
+            deleting it outright.</li>
+    </ul>
+
+    <!-- Section: using a comment to label a piece of markup -->
+    <h2 id="labeling-sections">Labeling a Section</h2>
+    <p>
+        Every section on every page of this site is preceded by a comment
+        like <code>&lt;!-- Section: why comments are useful --&gt;</code>,
+        including the one right above this paragraph, so anyone reading the
+        source can find a piece of content without reading the whole file.
+    </p>
+
+    <!-- Section: commenting out code instead of deleting it -->
+    <h2 id="commenting-out-code">Commenting Out Code</h2>
+    <p>
+        The paragraph that used to sit right here has been wrapped in a
+        comment instead of deleted, so it no longer appears on the page at
+        all:
+    </p>
+    <!--
+    <p>This paragraph used to be visible here, but it was commented out
+    instead of removed, so it's still in the file for reference.</p>
+    -->
+    <p>
+        View this page's source to see it still sitting there, disabled but
+        not gone.
+    </p>
+
+    <!-- Section: a caution about comments -->
+    <h2 id="caution">A Word of Caution</h2>
+    <p>
+        Comments are only hidden from the rendered page, not from the file
+        itself. Anyone can view a page's source and read every comment in
+        it, so nothing sensitive, like a password or a private note, should
+        ever be written inside one.
+    </p>
 </body>
 </html>

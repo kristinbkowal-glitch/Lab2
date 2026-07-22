@@ -17,5 +17,39 @@
             <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
     </nav>
+
+    <!-- Section 1: a meaningful image with full attributes -->
+    <h2 id="meaningful-image">A Meaningful Image</h2>
+    <p>
+        The <code>img</code> tag has no closing tag and no content of its
+        own; everything about it is expressed through attributes.
+        <code>src</code> points to the file, <code>alt</code> describes it
+        for anyone who can't see it, and <code>width</code> and
+        <code>height</code> tell the browser how much space to reserve
+        before the image finishes loading.
+    </p>
+    <figure>
+        <img src="images/sample-photo.svg" alt="A simple line drawing of the sun rising behind three overlapping mountain peaks, with a bird flying in the sky" width="400" height="250" title="A hand-drawn style sunrise over three mountains">
+        <figcaption>A sunrise over three mountains, drawn only with basic shapes.</figcaption>
+    </figure>
+
+    <!-- Section 2: decorative image with empty alt text -->
+    <h2 id="decorative-image">A Decorative Image</h2>
+    <p>
+        Not every image carries meaning. When an image is purely decorative,
+        the correct <code>alt</code> value is an empty string,
+        <code>alt=""</code>, which tells screen readers to skip right over
+        it instead of announcing a distracting filename.
+    </p>
+    <img src="images/tag-icon.svg" alt="" width="80" height="60">
+
+    <!-- Section 3: reusing the attributes page image with different sizing -->
+    <h2 id="resizing">The Same Image, Resized</h2>
+    <p>
+        Because <code>width</code> and <code>height</code> are just
+        attributes, the same source file can be shown at different sizes on
+        different pages without editing the image itself.
+    </p>
+    <img src="images/tag-icon.svg" alt="A price-tag icon with the text name equals value in quotes" width="100" height="75" title="The same tag icon shown smaller">
 </body>
 </html>

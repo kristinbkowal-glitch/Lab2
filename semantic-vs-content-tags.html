@@ -6,7 +6,7 @@
     <title>Semantic vs Content Tags</title>
 </head>
 <body>
-    <h1>Semantic vs Content Tags</h1>
+    <h1 id="top">Semantic vs Content Tags</h1>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -17,5 +17,104 @@
             <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
     </nav>
+
+    <!-- Power Up: a table of contents linking to each section by id -->
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#presentational-version">Presentational Version</a></li>
+        <li><a href="#semantic-version">Semantic Version</a></li>
+        <li><a href="#comparison">Comparison</a></li>
+    </ul>
+
+    <!-- The same short article, built twice, to compare the two approaches -->
+    <h2 id="presentational-version">Version 1: Presentational Tags Only</h2>
+    <p>
+        This version is built entirely out of <code>div</code>,
+        <code>span</code>, <code>b</code>, and <code>i</code>. Every one of
+        these tags only affects appearance; none of them tell a browser,
+        search engine, or screen reader what role the content plays.
+    </p>
+    <!-- Power Up: hidden inside details/summary so it can be expanded for comparison -->
+    <details>
+        <summary>Expand to see the presentational version</summary>
+        <div>
+            <div>
+                <span><b>The Daily Bytecode</b></span>
+            </div>
+            <div>
+                <div>
+                    <span><b>Why Semantics Matter</b></span>
+                    <p><i>Posted by a student learning HTML</i></p>
+                    <p>
+                        Screen readers rely on structure to help visitors
+                        navigate a page. Without it, everything is just one
+                        long block of text.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <span>&copy; 2026 The Daily Bytecode</span>
+            </div>
+        </div>
+    </details>
+
+    <h2 id="semantic-version">Version 2: Semantic Tags</h2>
+    <p>
+        This version marks up the exact same words, but every tag now
+        describes what it is: a banner, a navigation area, the main content,
+        a self-contained article, a section within it, and a footer.
+    </p>
+    <!-- Semantic rebuild using header, nav, main, article, section, footer, strong, em -->
+    <header>
+        <strong>The Daily Bytecode</strong>
+    </header>
+    <nav aria-label="Article sections">
+        <a href="#article-body">Jump to article body</a>
+    </nav>
+    <main>
+        <article>
+            <section id="article-body">
+                <h3>Why Semantics Matter</h3>
+                <p><em>Posted by a student learning HTML</em></p>
+                <p>
+                    Screen readers rely on structure to help visitors
+                    navigate a page. Without it, everything is just one long
+                    block of text.
+                </p>
+            </section>
+        </article>
+    </main>
+    <footer>
+        &copy; 2026 The Daily Bytecode
+    </footer>
+
+    <!-- Comparison, in my own words -->
+    <h2 id="comparison">Comparison</h2>
+    <p>
+        Both versions look identical, but they are not equally usable.
+        Screen readers can announce landmarks like <code>header</code>,
+        <code>nav</code>, <code>main</code>, and <code>footer</code>, which
+        lets someone using assistive technology jump straight to the article
+        body instead of listening to every line of navigation and boilerplate
+        first. A <code>div</code> gives none of that information; it is
+        invisible to a screen reader's landmark list because it has no
+        meaning of its own.
+    </p>
+    <p>
+        The same is true for <code>strong</code> and <code>em</code>
+        versus <code>b</code> and <code>i</code>. <code>strong</code> and
+        <code>em</code> tell assistive technology that text carries real
+        importance or emphasis, which can change how it is read aloud,
+        while <code>b</code> and <code>i</code> only change how the text
+        looks on screen and carry no meaning at all for someone who cannot
+        see it.
+    </p>
+    <p>
+        Search engines and other machines benefit the same way people using
+        screen readers do: an <code>article</code> tag tells a search engine
+        "this block is the actual content," which is more useful for
+        indexing and ranking than a page built entirely from generic
+        <code>div</code> containers with no identity of their own.
+    </p>
 </body>
 </html>
